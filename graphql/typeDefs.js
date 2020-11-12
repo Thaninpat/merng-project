@@ -1,5 +1,7 @@
 const { gql } = require('apollo-server');
 
+// Relation สร้างความสัมพันธ์ของแต่ละตาราง
+
 module.exports = gql`
   type Post {
     id: ID!
@@ -50,6 +52,7 @@ module.exports = gql`
   }
   type Subscription {
       newPost: Post!
+      newLike: Post!
   }
 
 `;
