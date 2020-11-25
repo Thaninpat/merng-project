@@ -30,6 +30,7 @@ module.exports = gql`
     createdAt: String!
   }
   type ViewUser {
+    id: ID!
     email: String!
     username: String!
     password: String!
@@ -47,10 +48,12 @@ module.exports = gql`
     getCompanies: [Company]
     getCompany(postId: ID!): Company
     viewUsers: [ViewUser]
-    viewUser(postId: ID!): ViewUser
+    viewUser(username: String): ViewUser
     rooms: [Room]
     countries: [Country]
-    # feed(filter: String): Country!
+    getDistrict(d: String): [Country]
+    getAmphur(a: String): [Country]
+    getProvince(p: String): [Country]
   }
   type Mutation {
     register(registerInput: RegisterInput): User!

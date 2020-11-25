@@ -12,9 +12,9 @@ module.exports = {
       }
     },
 
-    async viewUser(_, { postId }) {
+    async viewUser(_, { username }) {
       try {
-        const user = await User.findById(postId);
+        const user = await User.findOne({ username });
         if (user) {
           return user;
         } else {
