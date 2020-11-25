@@ -1,7 +1,5 @@
 const { gql } = require('apollo-server');
 
-// Relation สร้างความสัมพันธ์ของแต่ละตาราง
-
 module.exports = gql`
   type Post {
     id: ID!
@@ -50,6 +48,9 @@ module.exports = gql`
     getCompany(postId: ID!): Company
     viewUsers: [ViewUser]
     viewUser(postId: ID!): ViewUser
+    rooms: [Room]
+    countries: [Country]
+    # feed(filter: String): Country!
   }
   type Mutation {
     register(registerInput: RegisterInput): User!
@@ -60,11 +61,18 @@ module.exports = gql`
     deleteComment(postId: ID!, commentId: ID!): Post!
     likePost(postId: ID!): Post!
     createCompany(companyInput: CompanyInput): Company!
+    createRoom(roomInput: RoomInput): Room
   }
   type Subscription {
     newPost: Post!
     newLike: Post!
   }
+
+  # type Feed {
+  #   links: [Country!]!
+  #   count: Int!
+  # }
+
   type Company {
     id: ID!
     name: String!
@@ -79,5 +87,47 @@ module.exports = gql`
     amphur: String!
     district: String!
     zipCode: String!
+  }
+
+  type Room {
+    _id: ID
+    name: String
+    summary: String
+    description: String
+    room_type: String
+    maximum_nights: Int
+    minimum_nights: Int
+    beds: Int
+    accommodates: Int
+    price: Float
+    cleaning_fee: Float
+  }
+
+  input RoomInput {
+    name: String
+    summary: String
+    description: String
+    room_type: String
+    maximum_nights: Int
+    minimum_nights: Int
+    beds: Int
+    accommodates: Int
+    price: Float
+    cleaning_fee: Float
+  }
+
+  type Country {
+    _id: ID!
+    p: String!
+    a: String!
+    d: String!
+    z: Int
+  }
+
+  input CountryInput {
+    p: String!
+    a: String!
+    d: String!
+    z: Int
   }
 `;
