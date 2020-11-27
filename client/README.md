@@ -1,73 +1,70 @@
-# react-thailand-address-typeahead (jQuery free)
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+# Getting Started with Create React App
 
-This project fork from 
-[jquery.Thailand.js](https://github.com/earthchie/jquery.Thailand.js)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Demo
-[Example with storybook](http://zapkub.github.io/react-thailand-address)
+## Available Scripts
 
+In the project directory, you can run:
 
-## Requirement
-- react
+### `yarn start`
 
-## Installation
-```
-$ npm install react react-thailand-address-typeahead
-```
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## Usage
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-```js
-import AddressFormTypeahead from 'react-thailand-address-typeahead';
+### `yarn test`
 
-export default () => (
-    <div>
-        <AddressFormTypeahead
-         onAddressSelected={(addressObject) => console.log(addressObject)} 
-        />
-    </div>
-)
-```
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-> NOTE: For component styles you can include or use loader `./dist/styles.css` to your app or implement by yourself [styles](./dist/styles.css)
+### `yarn build`
 
-For futher more see [Example](./example/index.js)
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## Performance for Perf nerd
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-| ไฟล์ | ขนาดไฟล์ |
-| --- | ---:|
-| without data.json | 69 KB 
-| webpack with babili with data.json | 550 KB |
-| webpack with babili with data.json gzip | **86 KB** |
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## Todo
-- MORE UNIT TEST
-- custom styles example
-- improve performance and reduce bundle size
-- `data.json` lazy loading
-- server-side implementation example
-- using without React example
-- using with google map example
+### `yarn eject`
 
-## Development
-- Clone this project
-- run `npm install`
-- start development via storybook `npm run storybook`
-- navigate to `localhost:9001`
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-## Testing
-- `npm test`
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-## Contribute
-- open for any pullrequest
-- Commitizen prefer !! 😎
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-## Original fork and idea 
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-[earthchie](https://github.com/earthchie/) - Project Owner, Original fork
-(you should treat him a beer 😎🍺)
-## License
-- Original : WTFPL 2.0 http://www.wtfpl.net/
-- Also MIT (formally)
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `yarn build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
